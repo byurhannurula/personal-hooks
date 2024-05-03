@@ -76,30 +76,3 @@ export const useResize = () => {
   return { isMobile, sizes }
 }
 ```
-
-## Site metadata (Gatsbyjs specific)
-
-```jsx
-import { useStaticQuery, graphql } from 'gatsby'
-
-export const useSeo = () => {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          keywords
-          description
-          siteUrl
-          author {
-            name
-            handle
-          }
-        }
-      }
-    }
-  `)
-
-  return site.siteMetadata
-}
-```
